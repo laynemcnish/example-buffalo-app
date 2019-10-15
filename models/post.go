@@ -2,18 +2,20 @@ package models
 
 import (
 	"encoding/json"
+	"time"
+
 	"github.com/gobuffalo/pop"
 	"github.com/gobuffalo/validate"
-	"github.com/gofrs/uuid"
-	"time"
 	"github.com/gobuffalo/validate/validators"
+	"github.com/gofrs/uuid"
 )
+
 type Post struct {
-    ID uuid.UUID `json:"id" db:"id"`
-    Title string `json:"title" db:"title"`
-    Body string `json:"body" db:"body"`
-    CreatedAt time.Time `json:"created_at" db:"created_at"`
-    UpdatedAt time.Time `json:"updated_at" db:"updated_at"`
+	ID        uuid.UUID `json:"id" db:"id"`
+	Title     string    `json:"title" db:"title"`
+	Body      string    `json:"body" db:"body"`
+	CreatedAt time.Time `json:"created_at" db:"created_at"`
+	UpdatedAt time.Time `json:"updated_at" db:"updated_at"`
 }
 
 // String is not required by pop and may be deleted
