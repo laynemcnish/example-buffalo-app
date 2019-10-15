@@ -2,8 +2,8 @@
 # https://docs.docker.com/engine/userguide/eng-image/multistage-build/
 FROM gobuffalo/buffalo:v0.14.9 as builder
 
-RUN mkdir -p $GOPATH/src/github.com/splice
-WORKDIR $GOPATH/src/github.com/splice
+RUN mkdir -p $GOPATH/src/github.com/splice/myawesomeapp
+WORKDIR $GOPATH/src/github.com/splice/myawesomeapp
 
 ADD . .
 RUN go get ./...
